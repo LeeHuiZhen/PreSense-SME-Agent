@@ -1,0 +1,6 @@
+part_name,part_number,stock,location,unit_cost_myr
+Motor Bearing,MTR-BRG-994,2,Shelf A1,450
+Cooling Fan,CLG-FAN-102,0,Out of Stock,280
+High-Pressure Turbine Blade,HPT-BLD-007,3,Warehouse A,1200
+Fuel Injector Nozzle,FIN-NZL-023,7,Warehouse B,450
+Bearing Assembly,BRG-ASM-003,5,Shelf B2,650
