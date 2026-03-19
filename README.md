@@ -196,3 +196,25 @@ Sensor Data (21 channels)
 - One prevented failure per year: **ROI > 10× system cost**
 - Target market: **70M+ SMEs** across ASEAN manufacturing sector 
 ---
+
+## 🔄 Model Monitoring & Retraining
+
+PreSense is designed for continuous improvement in production:
+
+- **Retraining:** Run `python train.py` weekly on new sensor data
+- **Drift detection:** PELT change-point algorithm flags regime shifts automatically
+- **Fine-tuning:** Replace `archive/train_FD001.txt` with customer-specific sensor data
+- **Retraining time:** < 2 minutes on a standard laptop — no GPU required
+
+---
+
+## 📄 Dataset Citation
+
+Saxena, A., Goebel, K., Simon, D., & Eklund, N. (2008).
+*Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation.*
+Proceedings of the 1st International Conference on Prognostics and Health Management (PHM08).
+
+---
+
+*PreSense · Random Forest + SHAP + MCP Agentic Layer*
+*V HACK 2026 · Team Roti Canai · Universiti Sains Malaysia · School of Computer Sciences*
