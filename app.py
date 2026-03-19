@@ -384,7 +384,7 @@ def detect_degradation(sensor_data):
     valid_points = [cp for cp in change_points if cp < len(signal)]
     return valid_points[0] if valid_points else None
 
-display_data = full_data[full_data['time_in_cycles'] <= selected_cycle]
+display_data = full_data[full_data['time_in_cycles'] <= selected_cycle].copy()
 current_row  = display_data[display_data['time_in_cycles'] == selected_cycle]
 
 
