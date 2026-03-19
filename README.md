@@ -217,4 +217,4 @@ Proceedings of the 1st International Conference on Prognostics and Health Manage
 ---
 
 *PreSense · Random Forest + SHAP + MCP Agentic Layer*
-*V HACK 2026 · Team Roti Canai · Universiti Sains Malaysia · School of Computer Sciences*
+*· V HACK 2026 · Team Roti Canai*
