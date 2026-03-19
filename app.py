@@ -559,13 +559,18 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # KPI Banner
-st.markdown("""
+fleet_count   = df['unit_number'].nunique()
+total_sensors = len(BASE_SENSORS)
+open_wos      = len([u for u in df['unit_number'].unique()
+                     if df[df['unit_number']==u]['time_in_cycles'].max() > 150])
+
+st.markdown(f"""
 <div class='kpi-banner'>
-  <span>🏭 <b style='color:#00D4FF88'>Fleet:</b> 3 Units Active</span>
+  <span>🏭 <b style='color:#00D4FF88'>Fleet:</b> {fleet_count} Units Active</span>
   <span>⏱ <b style='color:#00D4FF88'>Uptime:</b> 99.2%</span>
   <span>💰 <b style='color:#00D4FF88'>Savings MTD:</b> RM 24,800</span>
-  <span>🔧 <b style='color:#00D4FF88'>Open WOs:</b> 2</span>
-  <span>📡 <b style='color:#00D4FF88'>Data Points:</b> 21 Sensors</span>
+  <span>🔧 <b style='color:#00D4FF88'>Open WOs:</b> {open_wos}</span>
+  <span>📡 <b style='color:#00D4FF88'>Sensors:</b> {total_sensors} Channels</span>
 </div>
 """, unsafe_allow_html=True)
 
@@ -838,10 +843,10 @@ b1, b2, b3, b4 = st.columns(4)
 
 with b1:
     if st.button("🛠️ Dispatch Maintenance"):
-        st.toast("Work order created — Ahmad Razif notified!", icon="👷")
+        st.toast(f"Work order WO-{machine_id:03d}-{selected_cycle:04d} created!", icon="👷")
 with b2:
     if st.button("📦 Reserve Spare Parts"):
-        st.toast("HPT-BLD-007 reserved at Warehouse A", icon="📦")
+        st.toast(f"Parts reserved for Unit #{machine_id:03d} at Cycle {selected_cycle}", icon="📦")
 with b3:
     if st.button("📞 Alert Plant Manager"):
         st.toast("Emergency SMS dispatched to manager!", icon="📱")
