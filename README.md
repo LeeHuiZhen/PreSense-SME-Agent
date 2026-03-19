@@ -62,7 +62,7 @@ PreSense is a three-layer autonomous maintenance platform:
  
 Trained and evaluated on the **NASA C-MAPSS Turbofan Engine Dataset (FD001)**:
  
-| Metric | Baseline | PreSense v2.0 |
+| Metric | Baseline | PreSense |
 |---|---|---|
 | Test RMSE | 41.66 | **19.00** |
 | Improvement | — | **+54.4%** |
